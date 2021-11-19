@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./roles/RoleAware.sol";
+import "./RoleAware.sol";
 import "./Tranche.sol";
-import "./roles/CallsStableCoinMintBurn.sol";
-import "./roles/DependsOnLiquidator.sol";
-import "./roles/DependsOnFeeRecipient.sol";
-import "./oracles/OracleAware.sol";
+import "./CallsStableCoinMintBurn.sol";
+import "./DependsOnLiquidator.sol";
+import "./DependsOnFeeRecipient.sol";
+import "./OracleAware.sol";
 
 /// Centerpiece of CDP: lending minted stablecoin against collateral
 /// Collateralized debt positions are expressed as ERC721 tokens (via Tranche)
