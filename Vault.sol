@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import "./IERC721Receiver.sol";
+import "./EnumerableSet.sol";
 import "./ProxyOwnershipERC721.sol";
 import "./Tranche.sol";
 import "./TrancheIDAware.sol";
-import "../interfaces/IVault.sol";
-import "./roles/DependsOnTranche.sol";
-import "./roles/DependsOnFundTransferer.sol";
+import "./IVault.sol";
+import "./DependsOnTranche.sol";
+import "./DependsOnFundTransferer.sol";
 
 abstract contract Vault is
     ProxyOwnershipERC721,
