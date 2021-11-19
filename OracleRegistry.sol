@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./oracles/OracleAware.sol";
-import "./roles/RoleAware.sol";
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import "./roles/DependsOnOracleListener.sol";
-import "../interfaces/IOracle.sol";
+import "./OracleAware.sol";
+import "./RoleAware.sol";
+import "./EnumerableSet.sol";
+import "./DependsOnOracleListener.sol";
+import "./IOracle.sol";
 
 /// Central hub and router for all oracles
 contract OracleRegistry is RoleAware, DependsOracleListener {
