@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol";
-import "../../interfaces/IOracle.sol";
+import "./IUniswapV2Pair.sol";
+import "./IOracle.sol";
 import "./Oracle.sol";
 import "./OracleAware.sol";
 import "./TwapOracle.sol";
-import "../roles/DependsOnTwapOracle.sol";
+import "./DependsOnTwapOracle.sol";
 
 /// Calculates value of LPT based on the reserves they represent, via the
 /// Value of their twap-tracked reserves
