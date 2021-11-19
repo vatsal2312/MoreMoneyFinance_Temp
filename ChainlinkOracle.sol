@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "./AggregatorV3Interface.sol";
 import "./Oracle.sol";
 import "./OracleAware.sol";
-import "../roles/DependsOnStableCoin.sol";
+import "./DependsOnStableCoin.sol";
 
 /// Use chainlink to get dollar values for tokens
 /// Fallback goes to twap
