@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "./ERC20.sol";
+import "./ReentrancyGuard.sol";
 
-import "./roles/RoleAware.sol";
-import "./roles/DependsOnMinterBurner.sol";
+import "./RoleAware.sol";
+import "./DependsOnMinterBurner.sol";
 
 contract Stablecoin is
     RoleAware,
