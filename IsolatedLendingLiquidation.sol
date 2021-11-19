@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./oracles/OracleAware.sol";
-import "./roles/RoleAware.sol";
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+import "./OracleAware.sol";
+import "./RoleAware.sol";
+import "./EnumerableSet.sol";
 import "./IsolatedLending.sol";
-import "./roles/DependsOnStableCoin.sol";
-import "./roles/DependsOnIsolatedLending.sol";
-import "./roles/DependsOnFeeRecipient.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "./DependsOnStableCoin.sol";
+import "./DependsOnIsolatedLending.sol";
+import "./DependsOnFeeRecipient.sol";
+import "./ReentrancyGuard.sol";
 
 /// Liquidation contract for IsolatedLending
 contract IsolatedLendingLiquidation is
