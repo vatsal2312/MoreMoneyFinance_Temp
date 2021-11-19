@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "./SafeERC20.sol";
+import "./IERC20.sol";
+import "./EnumerableSet.sol";
+import "./ReentrancyGuard.sol";
 
-import "../interfaces/IStrategy.sol";
-import "./oracles/OracleAware.sol";
+import "./IStrategy.sol";
+import "./OracleAware.sol";
 import "./Tranche.sol";
-import "./roles/DependsOnStrategyRegistry.sol";
-import "./roles/CallsStableCoinMintBurn.sol";
-import "./roles/DependsOnTranche.sol";
-import "./roles/DependsOnFundTransferer.sol";
+import "./DependsOnStrategyRegistry.sol";
+import "./CallsStableCoinMintBurn.sol";
+import "./DependsOnTranche.sol";
+import "./DependsOnFundTransferer.sol";
 
 /// Base class for strategies with facilities to manage (deposit/withdraw)
 /// collateral in yield bearing system as well as yield distribution
