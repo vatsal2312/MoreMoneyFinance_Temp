@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./roles/RoleAware.sol";
-import "./roles/DependsOnTranche.sol";
+import "./RoleAware.sol";
+import "./DependsOnTranche.sol";
 
 contract TrancheIDService is RoleAware, DependsOnTranche {
     uint256 public constant totalTrancheSlots = 1e8;
