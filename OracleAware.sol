@@ -5,15 +5,22 @@ import "./TrancheIDAware.sol";
 import "./OracleRegistry.sol";
 import "./IOracle.sol";
 import "./DependsOnOracleRegistry.sol";
+import "./DependentContract.sol";
+
 
 /// Mixin for contracts that depend on oracles, caches current oracles
 /// resposible for a token pair
-abstract contract OracleAware is RoleAware, DependsOnOracleRegistry {
+abstract contract OracleAware is RoleAware {
     mapping(address => mapping(address => address)) public _oracleCache;
 
     constructor() {
         _rolesPlayed.push(ORACLE_LISTENER);
     }
+    
+    function oracleRegistry() internal view returns (OracleRegistry) {
+        return OracleRegistry(mainCharacterCache[ORACLE_REGISTRY]);
+    }
+
 
     /// Notify contract to update oracle cache
     function newCurrentOracle(address token, address pegCurrency) external {
