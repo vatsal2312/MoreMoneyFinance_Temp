@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "./roles/RoleAware.sol";
+import "./RoleAware.sol";
 import "./Executor.sol";
-import "../interfaces/IDependencyController.sol";
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import "./roles/DependentContract.sol";
+import "./IDependencyController.sol";
+import "./EnumerableSet.sol";
+import "./DependentContract.sol";
 
 /// @title Provides a single point of reference to verify integrity
 /// of the roles structure and facilitate governance actions
