@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity ^0.8.0;
 
-import "../Executor.sol";
-import "../roles/DependsOnIsolatedLending.sol";
-import "../roles/DependsOnOracleRegistry.sol";
-import "../Strategy.sol";
+import "./Executor.sol";
+import "./DependsOnIsolatedLending.sol";
+import "./DependsOnOracleRegistry.sol";
+import "./Strategy.sol";
 
 contract TokenActivation is
     Executor,
